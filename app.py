@@ -19,10 +19,10 @@ def chat():
 
 
 def get_Chat_response(text):
-    response = openai.Completion.create(engine="gpt-3.5-turbo-instruct" , prompt=input , max_tokens=50)
-    return response["choices"][0]["text"]
+    # response = openai.Completion.create(engine="gpt-3.5-turbo-instruct" , prompt=input , max_tokens=50)
+    # return response["choices"][0]["text"]
 
-
+    return "Hello Brother."
     
 
 if __name__ == '__main__':
