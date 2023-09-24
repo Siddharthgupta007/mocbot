@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template,request, jsonify
 import  openai
-openai.api_key = "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"
+from logging import FileHandler,WARNING
+openai.api_key = " "
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder = 'templates')
 
 @app.route("/")
 def index():
@@ -13,16 +14,17 @@ def index():
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():
-    msg = request.form["msg"]
+    msg = request.form.get("msg1")
+    
     input = msg
     return get_Chat_response(input)
 
-
 def get_Chat_response(text):
-    # response = openai.Completion.create(engine="gpt-3.5-turbo-instruct" , prompt=input , max_tokens=50)
-    # return response["choices"][0]["text"]
-
-    return "Hello Brother."
+     text= "tell me your name?"
+     response = openai.Completion.create(engine="gpt-3.5-turbo-instruct" , prompt=text , max_tokens=100)
+     return response["choices"][0]["text"]
+   
+    
     
 
 if __name__ == '__main__':

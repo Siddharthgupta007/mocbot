@@ -13,9 +13,9 @@ body
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    
     font-family: "Lato", sans-serif;
+    color: white;
    
 }
 h1 {
@@ -125,6 +125,21 @@ input::placeholder {
     color: #888;
     text-align: center;
 }
+#conversation {
+
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .chatbot-text {
+    background-color: white;
+    color: #333333;
+    
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 .chatbox-popup .chatbox-popup__footer {
     box-sizing: border-box;
     display: flex;
@@ -177,4 +192,15 @@ input::placeholder {
     align-items: center;
     justify-content: space-around;
     flex: 0 0 auto;
+}
+#messageFormeight
+{
+    background-color: aqua;
+    color: black;
+}
+.message-bubble
+{
+    background-color: blueviolet;
+    height: 200px;
+    width: 200px;
 }

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/style.css">
     
     <title>MoC</title>
@@ -13,6 +17,10 @@
     <section class="page">
     <h1 class="top-heading">The Ministry of Coal & Mines</h1>
 </section>
+<div id="messageFormeight">
+  <h2>Hello</h2>		
+      
+</div>
 <button class="chatbox-open" title="Title">
     <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
   </button>
@@ -26,18 +34,25 @@
     </aside>
     <aside style="flex:8">
       <h1>MocBot</h1> 
+      
     </aside>
     <aside style="flex:1">
       <button class="chatbox-maximize" title="Title"><i class="fa fa-window-maximize" aria-hidden="true"></i></button>
     </aside>
   </header>
   <main class="chatbox-popup__main">
-    We make it simple and seamless for<br> bussiness and people to talk to each<br> other. Ask us anything.
-  </main>
+   
+  <div id="conversation">
+    <div class="chatbot-message">
+      <p class="chatbot-text">Hi! 👋 it's great to see you!</p>
+    </div>
+  </div>
+</main>
   <footer class="chatbox-popup__footer">
-    <form id="messageArea" class="input-group" >
+    <form id="input-form" class="input-group" >
     <aside style="flex:10">
-      <input type="text" id="text-box" name="msg" placeholder="Type your message here..." autocomplete="off" required/>
+      <message-container>
+      <input type="text" id="input-field" name="msg1" placeholder="Type your Message Here..." autocomplete="off" required/>
     </aside>
     
         <button type="submit" id="send" role="button" title="Title">
@@ -45,12 +60,12 @@
                 <i class="fa fa-paper-plane" aria-hidden="true"></i>
               </aside>
         </button>
-    
+      </message-container>
 </form>
    
   </footer>
 </section>
-<section class="chatbox-panel">
+<!-- <section class="chatbox-panel">
   <header class="chatbox-panel__header">
     <aside style="flex:3">
       <i class="fa fa-user-circle fa-3x chatbox-popup__avatar" aria-hidden="true"></i>
@@ -86,7 +101,7 @@
             </div>
         </form>
   </footer>
-</section>
+</section> -->
 <script src="/static/serve.js"></script>
 </body>
 </html>
