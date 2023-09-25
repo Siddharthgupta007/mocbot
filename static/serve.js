@@ -27,8 +27,6 @@
 
 // Add event listener to input form
 inputForm.addEventListener('submit', function(event) {
-  var answer;
-
     // Prevent form submission
     event.preventDefault();
   
@@ -41,6 +39,8 @@ inputForm.addEventListener('submit', function(event) {
       type: "POST",
       url: "/get",
   }).done(function(data) {
+    const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
+
     let message = document.createElement('div');
   message.classList.add('chatbot-message', 'user-message');
   message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${input}</p>`;
@@ -48,6 +48,7 @@ inputForm.addEventListener('submit', function(event) {
   const response =data;
 
   // Add chatbot response to conversation
+
   message = document.createElement('div');
   message.classList.add('chatbot-message','chatbot');
   message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${response}</p>`;
@@ -55,10 +56,9 @@ inputForm.addEventListener('submit', function(event) {
   message.scrollIntoView({behavior: "smooth"});
       
   })
-  console.log(answer)
+
     // Clear input field
   inputField.value = '';
-  const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
   
   // Add user input to conversation
   
