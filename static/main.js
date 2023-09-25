@@ -32,7 +32,8 @@ inputForm.addEventListener('submit', function(event) {
   
     // Get user input
     const input = inputField.value;
-    $.ajax({
+   
+    jQuery.ajax({
       data: {
           msg: input,	
       },
@@ -40,6 +41,7 @@ inputForm.addEventListener('submit', function(event) {
       url: "/get",
   }).done(function(data) {
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
+  
 
     let message = document.createElement('div');
   message.classList.add('chatbot-message', 'user-message');
@@ -58,8 +60,9 @@ inputForm.addEventListener('submit', function(event) {
   })
 
     // Clear input field
-  inputField.value = '';
   
+  inputField.value = '';
+ 
   // Add user input to conversation
   
 

@@ -1,7 +1,7 @@
 from flask import Flask, render_template,request, jsonify
 import  openai
 from logging import FileHandler,WARNING
-openai.api_key = ""
+openai.api_key =  "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"
 
 
 
@@ -12,11 +12,12 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/get", methods=["GET", "POST"])
+@app.route("/get", methods=["POST"])
 def chat():
-    message =request.form['msg'] 
+    message = request.form['msg'] 
     input = message
     return get_Chat_response(input)
+
 
 def get_Chat_response(text):
      response = openai.Completion.create(engine="gpt-3.5-turbo-instruct" , prompt=text , max_tokens=100)
