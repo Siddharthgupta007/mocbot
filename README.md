@@ -9,7 +9,7 @@ Flask , openai
 
 # Steps to Run :
 ## install libraries :
-> pip install openai
+> pip install openai <br>
 > pip install Flask
 ## Running the bot :
 go to terminal
