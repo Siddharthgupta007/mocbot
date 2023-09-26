@@ -24,7 +24,7 @@
  const conversation = document.getElementById('conversation');
  const inputForm = document.getElementById('input-form');
  const inputField = document.getElementById('input-field');
-
+ 
 // Add event listener to input form
 inputForm.addEventListener('submit', function(event) {
     // Prevent form submission
@@ -60,30 +60,11 @@ inputForm.addEventListener('submit', function(event) {
     // Clear input field
   inputField.value = '';
   
+function scrollToBottom() {
+  conversation.scrollTop = conversation.scrollHeight;
+}
+
   // Add user input to conversation
-  
+  scrollToBottom();
+  });
 
-});
-// function generateResponse(input)
-// {
-//     console.log(1);
- 
-//     console.log(answer)
-//     return answer
-   
-
-
-// }
- /*
- $.ajax({
-             data: {
-                 msg: rawText,	
-             },
-             type: "POST",
-             url: "/get",
-         }).done(function(data) {
-             var botHtml = '<div style ="color :aqua"><h1>Hello World</h1></div>'
-             $("#messageFormeight").append($.parseHTML(botHtml));
-         });
-         event.preventDefault();
- */

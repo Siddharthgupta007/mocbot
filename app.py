@@ -1,7 +1,7 @@
 from flask import Flask, render_template,request, jsonify
 import  openai
 from logging import FileHandler,WARNING
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 
