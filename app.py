@@ -8,7 +8,7 @@ from langchain.schema import (
     SystemMessage
 )
 
-chat = ChatOpenAI(openai_api_key="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")
+chat = ChatOpenAI(openai_api_key="API KEY")
 
 app = Flask(__name__, template_folder = 'templates')
 
