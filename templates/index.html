@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <title>MoC</title>
+</head>
+<body>
+    <section class="page">
+    <h1 class="top-heading">The Ministry of Coal & Mines</h1>
+</section>
+
+<button class="chatbox-open" title="Title">
+    <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+  </button>
+<button class="chatbox-close" title="Title">
+    <i class="fa fa-close fa-2x" aria-hidden="true"></i>
+  </button>
+<section class="chatbox-popup">
+  <header class="chatbox-popup__header">
+    <aside style="flex:3">
+      <i class="fa fa-user-circle fa-4x chatbox-popup__avatar" aria-hidden="true"></i>
+    </aside>
+    <aside style="flex:8">
+      <h1>MocBot</h1> 
+      
+    </aside>
+    <aside style="flex:1">
+      <button class="chatbox-maximize" title="Title"><i class="fa fa-window-maximize" aria-hidden="true"></i></button>
+    </aside>
+  </header>
+  <main class="chatbox-popup__main" id ="main-box">
+
+    <div class="chat-body"></div>
+   
+  <div id="conversation">
+    <div class="gretings">
+      <p class="greet">Hi! 👋 it's great to see you!</p>
+    </div>
+    <div class="chatbot-message">
+      
+    </div>
+    <div class="user-message">
+     
+    </div>
+  </div>
+</main>
+  <footer class="chatbox-popup__footer">
+    <form id="input-form" class="input-group" >
+    <aside style="flex:10">
+      <message-container>
+        <input type="text" id="input-field" name="msg" placeholder="Type your message here...">
+    </aside>
+    
+        <button type="submit" id="send" role="button" title="Title">
+            <aside style="flex:1;color:#888; text-align:center;">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </aside>
+        </button>
+      </message-container>
+</form>
+   
+  </footer>
+</section>
+<!-- <section class="chatbox-panel">
+  <header class="chatbox-panel__header">
+    <aside style="flex:3">
+      <i class="fa fa-user-circle fa-3x chatbox-popup__avatar" aria-hidden="true"></i>
+    </aside>
+    <aside style="flex:6">
+      <h1>MocBot</h1>
+    </aside>
+    <aside style="flex:3;text-align:right;">
+      <button class="chatbox-minimize" title="Title"><i class="fa fa-window-restore" aria-hidden="true"></i></button>
+      <button class="chatbox-panel-close" title="Title"><i class="fa fa-close" aria-hidden="true"></i></button>
+    </aside>
+  </header>
+  <main class="chatbox-panel__main" style="flex:1">
+    We make it simple and seamless for<br> bussiness and people to talk to each<br> other. Ask us anything.
+  </main>
+  <div id="messageFormeight" class="card-body msg_card_body">
+							
+							
+  </div>
+  <footer class="chatbox-panel__footer">
+    
+    <aside style="flex:10">
+        <form id="messageArea" class="input-group">
+            <aside style="flex:10">
+              <input type="text" id="text-box-2" name="msg" placeholder="Type your message here..." autocomplete="off" class="form-control type_msg" required/>
+            </aside>
+            <div class="input-group-append">
+                <button type="submit" id="send"  role="button" title="Title">
+                    <aside style="flex:1;color:#888;text-align:center;">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                      </aside>
+                </button>
+            </div>
+        </form>
+  </footer>
+</section> -->
+<script src="/static/serve.js"></script>
+</body>
+</html>
