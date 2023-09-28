@@ -126,20 +126,64 @@ input::placeholder {
     text-align: center;
 }
 #conversation {
-
     overflow-y: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    
   }
-  .chatbot-text {
+
+
+.greet{
+
+  padding: 8px;
+  background:white;
+  margin: 5px;
+  color:black;
+
+  align-self:center;
+}
+
+/* #0652c0; */
+
+.user-message {
+    background: #274c80;
+    color: white;
+    align-self: flex-start;
+   
+    /* padding:3px 10px; */
+    padding-inline:10px;
+    border-radius: 10px 10px 3px 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+     margin-top: 10px;
+ }
+
+.chatbot-message {
+   
+  padding-left:8px;
+  padding-right:8px;
+  margin-left:50px;
+  color:black;
+  border-radius: 20px 20px 20px 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+
+
+  /* .chatbot-text {
     background-color: white;
     color: #333333;
     
     padding: 8px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  } */
+
+
+
+
 .chatbox-popup .chatbox-popup__footer {
     box-sizing: border-box;
     display: flex;
